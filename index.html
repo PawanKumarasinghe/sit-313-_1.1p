@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Personal Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f0f0f0;
+    }
+    nav {
+      background: #333;
+      overflow: hidden;
+    }
+    nav a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    nav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    header {
+      background-image: url('./assets/images/image%20(2).jpg');
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 60vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    header img {
+      display: none;
+    }
+    .overlay{
+        background: rgba(148, 143, 143, 0.596);
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+        color:black;
+        font-size: 1.5em;
+        font-weight: 600;
+        opacity: 0;
+        font-family: poppins, sans-serif;
+    }
+    header:hover .overlay{
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .profile {
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .profile img {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+    }
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+    .project {
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 16px;
+      width: 320px;
+      padding: 20px 16px 16px 16px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.12), 0 1.5px 4px rgba(0,0,0,0.08);
+      transition: transform 0.2s, box-shadow 0.2s;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .project:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.18), 0 2px 8px rgba(0,0,0,0.12);
+      border-color: #007bff;
+    }
+    .project img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 12px 12px 0 0;
+      margin-bottom: 12px;
+    }
+    .project h3 {
+      margin: 10px 0 5px;
+      font-size: 1.3em;
+      color: #222;
+      letter-spacing: 0.5px;
+    }
+    .project p {
+      margin: 0;
+      font-size: 1em;
+      color: #555;
+    }
+    .project a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 7px 18px;
+      background: #007bff;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+    .project a:hover {
+      background: #0056b3;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+      padding: 20px;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#work">Work</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <header>
+    <div class="overlay">Hey, I’m PAWAN</div>
+  </header>
+
+  <section class="profile" id="about">
+    <img src="./assets/images/dp.jpg" alt="Profile Photo" />
+    <h2>Frontend Developer</h2>
+    <h3 style="margin-top:10px; font-weight:400; color:#333;">I am the full-stack web developer based in Melbourne, Australia</h3>
+  </section>
+
+  <section style="text-align:center; margin-top:40px;">
+    <h2 style="font-size:2em; font-weight:600; color:#222; letter-spacing:1px;">Here's what I have done so far</h2>
+  </section>
+  <section class="projects" id="work">
+    <div class="project">
+      <img src="./assets/images/project-image (1).png" alt="Project 1" />
+      <h3>Task Mananer App </h3>
+      <p><a href="https://github.com/PawanKumarasinghe/SIT305-4.1p-task-manager-app">View on GitHub</a></p>
+    </div>
+    <div class="project">
+      <img src="./assets/images/project-image (2).png" alt="Project 2" />
+      <h3>Unit COnvertor App</h3>
+      <p><a href="https://github.com/PawanKumarasinghe/SIT305-2.1p-unit-converter-app">View on GitHub</a></p>
+    </div>
+    <div class="project">
+      <img src="./assets/images/project-image (3).png" alt="Project 3" />
+      <h3>Quiz App</h3>
+      <p><a href="https://github.com/PawanKumarasinghe/SIT305-4.1p-quiz-app">View on GitHub</a></p>
+    </div>
+  </section>
+
+  <section class="gallery-title" style="text-align:center; margin-top:40px;">
+    <h2 style="font-size:2em; font-weight:600; color:#222; letter-spacing:1px;">My Gallery</h2>
+  </section>
+  <section class="gallery" id="contact">
+    <img src="./assets/images/image (1).jpg" alt="Gallery 1" />
+    <img src="./assets/images/image (2).jpg" alt="Gallery 2" />
+    <img src="./assets/images/image (3).jpg" alt="Gallery 3" />
+    <img src="./assets/images/image (4).jpg" alt="Gallery 4"/>
+    <img src="./assets/images/image (5).jpg" alt="Gallery 5" />
+    <img src="./assets/images/image (6).jpg" alt="Gallery 6"/>
+    
+  </section>
+
+</body>
+</html>
